@@ -14,7 +14,15 @@ body {
   background-color: #ccff00;
   margin: 5px;
   border-radius: 5px;
+  transition: all 0.08s;
 }
+
+.pressed {
+  transform: scale(1.05);
+  background-color: #f1fe00;
+  box-shadow: 0 0 10px #ccff00;
+}
+
 
 p {
   position: relative;

@@ -6,14 +6,22 @@ import './css/styles.css';
 $(document).ready(function () {
   $('body').on('keydown', function (k) {
     const audio = document.querySelector(`audio[data-key="${k.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${k.keyCode}"]`);
     if (!audio) return;
-    const playPromise = audio.play();
-    if (playPromise !== null) {
-      playPromise.catch(() => { audio.play(); });
-    }
-
-    console.log(audio);
-    console.log(playPromise);
-
+    audio.currentTime = 0;
+    audio.play();
+    key.classList.add('pressed');
+    console.log(key);
   });
+
+  function removeTransition(e) {
+    if (e.propertyName !== 'transform') {
+      return;
+    };
+
+    this.classList.remove('pressed');
+  }
+
+  const keys = document.querySelectorAll('.key');
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 });

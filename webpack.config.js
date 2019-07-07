@@ -40,13 +40,13 @@ module.exports = {
         loader: "eslint-loader"
       },
       {
-        test: /\.(gif|png|jpe?g|svg|bmp)$/,
+        test: /\.(gif|png|jpe?g|svg|bmp|wav)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/images/'
+              outputPath: 'assets/images',
             }
           }
         ]
