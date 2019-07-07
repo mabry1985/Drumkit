@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+}
+
+#keys {
+  margin-top: 80px;
+
+}
+
+.key {
+  width: 100px;
+  height: 100px;
+  color: black;
+  background-color: #ccff00;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+p {
+  position: relative;
+  left: 45px;
+  top: 35px;
+}
