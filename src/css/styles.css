@@ -1,18 +1,18 @@
 body {
-  background-color: black;
 }
 
 #keys {
-  margin-top: 80px;
-
+  top: 299px;
+left: 599px;
+  position: relative;
 }
 
 .key {
-  width: 100px;
-  height: 100px;
+  width: 77px;
+  height: 77px;
   color: black;
   background-color: #ccff00;
-  margin: 5px;
+  margin: 8px;
   border-radius: 5px;
   transition: all 0.08s;
 }
@@ -28,4 +28,9 @@ p {
   position: relative;
   left: 45px;
   top: 35px;
+}
+
+#mpc {
+  width: 1000px;
+  position:absolute;
 }

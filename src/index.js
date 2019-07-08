@@ -17,10 +17,10 @@ $(document).ready(function () {
   function removeTransition(e) {
     if (e.propertyName !== 'transform') {
       return;
-    };
+    }
 
     this.classList.remove('pressed');
-  }
+  }console.warn();
 
   const keys = document.querySelectorAll('.key');
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
